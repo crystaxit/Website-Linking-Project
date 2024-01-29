@@ -6,7 +6,7 @@ This project has different types of HTML, CSS and JavaScript codes. I Created a 
 
 ## Screenshots
 
-![App Screenshot](![image](https://github.com/crystaxit/Website-Linking-Project/assets/13645802/6d3f48c1-d344-4eac-aa20-41b666151290))
+![App Screenshot](https://github.com/crystaxit/Website-Linking-Project/assets/13645802/6d3f48c1-d344-4eac-aa20-41b666151290)
 
 ## How to Run
 
