@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>
+Array
+</title>
+<style type="text/css">
+
+s1{color:red;font-size:20pt;font-family:Forte;}
+s2{color:blue;font-size:20pt}
+b{background-color: grey;}
+
+</style>
+<script language="javascript">
+function array()
+{
+	var str="ABC";
+	var str2="sarvesh";
+	var cars=new Array("Ferrari","Lamborghini","Bentley","Rolce-Royce","Bugatti","BMW"); 
+	document.write("<s2 align='center'>"+"Array Elements:  Ferrari,Lamborghini,Bentley,Rolce-Royce,Bugatti,BMW"+"</s2>");
+	document.write("<table border=3>");
+	document.write("<tr><th colspan=4> Sr.No </th><th colspan=3>Array Methods</th><th colspan=2>Output of Methods</th></tr>")
+	document.write("<tr><td colspan=4>" +"1"+ "</td><td colspan=3>"+"cars.join(',')"+ "</td><td colspan=3>"+cars.join(',')+ "</td></tr>");
+	document.write("<tr><td colspan=4>" +"2"+ "</td><td colspan=3>"+"cars.pop()"+ "</td><td colspan=3>"+cars.pop()+"</td></tr>");
+	document.write("<tr><td colspan=4>" +"3"+ "</td><td colspan=3>"+"New Array"+ "</td><td colspan=3>"+cars.join(',')+ "</td></tr>");
+	document.write("<tr><td colspan=4>" +"4"+ "</td><td colspan=3>"+"cars.push('ABC')"+ "</td><td colspan=3>"+cars.push(str)+ "</td></tr>");
+	document.write("<tr><td colspan=4>" +"5"+ "</td><td colspan=3>"+"New Array"+ "</td><td colspan=3>"+cars.join(',')+ "</td></tr>");
+	document.write("<tr><td colspan=4>" +"6"+ "</td><td colspan=3>"+"cars.reverse()"+ "</td><td colspan=3>"+cars.reverse()+ "</td></tr>");
+	document.write("<tr><td colspan=4>" +"7"+ "</td><td colspan=3>"+"cars.shift()"+ "</td><td colspan=3>"+cars.shift()+ "</td></tr>");
+	document.write("<tr><td colspan=4>" +"8"+ "</td><td colspan=3>"+"New Array"+ "</td><td colspan=3>"+cars.join(',')+ "</td></tr>");
+	document.write("<tr><td colspan=4>" +"9"+ "</td><td colspan=3>"+"cars.slice(1,3)"+ "</td><td colspan=3>"+cars.slice(1,3)+ "</td></tr>");
+	document.write("<tr><td colspan=4>" +"10"+ "</td><td colspan=3>"+"cars.sort()"+ "</td><td colspan=3>"+cars.sort()+ "</td></tr>");
+	document.write("<tr><td colspan=4>" +"11"+ "</td><td colspan=3>"+"cars.splice(1,2,'Fortuner')"+ "</td><td colspan=3>"+cars.splice(1,2,"Fortuner")+ "</td></tr>");
+	document.write("<tr><td colspan=4>" +"12"+ "</td><td colspan=3>"+"New Array"+ "</td><td colspan=3>"+cars.join(',')+ "</td></tr>");
+	document.write("<tr><td colspan=4>" +"13"+ "</td><td colspan=3>"+"cars.unshift('sarvesh')"+ "</td><td colspan=3>"+cars.unshift(str2)+ "</td></tr>");
+	document.write("<tr><td colspan=4>" +"14"+ "</td><td colspan=3>"+"New Array"+ "</td><td colspan=3>"+cars.join(',')+ "</td></tr>");
+	
+	
+}
+	
+
+</script>
+
+</head>
+
+<body>
+
+<center>
+<h1 align="center">Experiment No. - 3<br>
+Question No. - Part 3<br>
+Roll No. - 21<br>
+Array Objects<br>
+Class - TYIF</h1><hr>
+<script>array();</script>
+</center>
+<form name="f1">
+
+</form>
+
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>Armstrong Number</title>
+<style>
+h1{ 
+	color:purple;
+	font-family: "Arial";
+ 	font-size: 50px;
+}
+</style>
+<script language="JavaScript">
+function armstrong()
+{
+var min=document.f1.low.value;
+var max=document.f1.high.value;
+var i,r,sum=0,n;
+for(i=min;i<=max;i++)
+{
+         n=i;
+   	 sum = 0;
+         while(n>0)
+	 {
+             r=n%10;
+             sum=sum+(r*r*r);
+             n=parseInt(n/10);
+         }
+         if(sum==i)
+         {  
+	     alert(i+" "); 
+	 }
+}
+}
+</script>
+<body >
+<h1 align="center">Assignment No. - 2<br>
+Question No. - Part 4 , Q.2<br>
+Roll No. - 21<br>
+Class - TYIF</h1><hr>
+<form name="f1">
+<table align="center">
+<tr><td>Limit 1:<select name="low">
+<option value="1">1</option>
+<option value="10">10</option>
+<option value="100">100</option>
+<option value="1000">1000</option>
+</select></td></tr>
+<tr><td>Limit 2:<select name="high">
+<option value="1">1</option>
+<option value="10">10</option>
+<option value="100">100</option>
+<option value="1000">1000</option>
+<tr><td><br><input type="Button" name="btn_arm"value="Check" onClick="armstrong()"></td></tr>
+</table>
+</form>
+</body>
+</html>

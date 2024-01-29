@@ -1,0 +1,68 @@
+<html>
+   <head>
+   <title>Find Vowels</title>
+   <script language="javascript">
+	function calculate()
+{
+var v=0,c=0,ch,a=0,e=0,i=0,o=0,u=0;
+for(k=0;k<document.f1.t1.value.length;k++)
+{
+	ch=document.f1.t1.value.charAt(k);
+switch(ch)
+{
+	
+	case 'a':
+	a+=1;
+	break;
+
+
+
+	case 'e':
+	e+=1;
+	break;
+
+
+
+	case 'i':
+	i+=1;
+	break;
+
+
+	
+	case 'o':
+	o+=1;
+	break;
+
+
+	case 'u':
+	u+=1;
+	break;
+}
+}
+v=a+e+i+o+u;
+c=document.f1.t1.value.length - v;
+alert("vowels:"+v );
+alert("consonants:"+c );
+alert("A:"+a );
+alert("E:"+e );
+alert("I:"+i);
+alert("O:"+o );
+alert("U:"+u );
+
+}
+</script>
+</head>
+<body>
+<h1 align="center">Assignment No. - 2<br>
+Question No. - Part 3, Q.5<br>
+Roll No. - 21<br>
+Class - TYIF</h1><hr>
+<form name="f1">
+<table><tr><td>
+<b>Enter String:</b></td>
+<td><input type="text" name="t1" value=""></td></tr>
+<br><td></td><td><br><input type="button" name="btn1" value="Find" onclick="calculate()"></td></tr></table>
+</form>
+</body>
+</html>
+    

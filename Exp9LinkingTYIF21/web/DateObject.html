@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>Date Object</title>
+<style type="text/css">
+h1{color:red;font-size:25pt;font-family:verdana;}
+</style>
+<script language="javascript">
+var date = new Date();
+function day()
+{	document.write("<h1>Date objects</h1>");
+	document.write("<table border=5>");
+	document.write("<tr><th>Function name</th><th>output</th></tr>");
+	document.write("<tr><td>DaY</td><td>" +date.getDate()+ "</td></tr>");
+	document.write("<tr><td>Month</td><td>" +(date.getMonth()+1)+ "</td></tr>");
+	document.write("<tr><td>Year</td><td>" +date.getFullYear()+ "</td></tr>");
+	document.write("<tr><td>Hour</td><td>" +date.getHours()+ "</td></tr>");
+	document.write("<tr><td>Minutes</td><td>" +date.getMinutes()+ "</td></tr>");
+	document.write("<tr><td>Seconds</td><td>" +date.getSeconds()+ "</td></tr>");
+}
+</script>
+</head>
+<body>
+<h1 align="center">Experiment No. - 3<br>
+Question No. - Part 1 , Q.1<br>
+Roll No. - 21<br>
+Date Objects<br>
+Class - TYIF</h1><hr>
+<form name="f1">
+<center>
+<table align="center">
+<tr><td>
+<input type="button" name="btn" value="Check Date" onClick="day()"></td></tr>
+</table>		
+</html>

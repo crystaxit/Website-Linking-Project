@@ -1,0 +1,50 @@
+<html>
+<head>
+	<script language="javascript"></script>
+	<title>Check Palindrome with JavaScript Program</title>
+	<script>
+		
+		function myFunction()
+		{
+			
+			var str = prompt(document.getElementById.value);
+			
+			
+			var result = checkPalindrome(str);
+			alert('The Entered String "'+str +'" is "'+result+'"');
+		}
+		
+		function checkPalindrome(str)
+		{
+			var orignalStr;
+			 
+			str = str.toLowerCase();
+			
+			
+			orignalStr = str;
+			
+			
+			str = str.split('');  
+			str = str.reverse(); 
+			str = str.join(''); 
+			
+			var reverseStr = str;
+						
+			if(orignalStr == reverseStr){
+				return 'Palindrome'; // 
+			}else{
+				return 'Not Palindrome';
+			}
+		}
+	</script>
+</head>
+<body>
+<h1 align="center">Assignment No. - 2<br>
+Question No. - Part 3 , Q.3<br>
+Roll No. - 21<br>
+Class - TYIF</h1><hr>
+	<form name="f1">
+		<input type="button" onclick="myFunction()" value="Check Palindrome" />
+	</form>
+</body>
+</html>

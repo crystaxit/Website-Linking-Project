@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>Javascript Program to find greatest and smallest from 3 numbers</title>
+<script language="javascript">
+function greater()
+{
+var num1=parseInt(document.f1.t1.value);
+var num2=parseInt(document.f1.t2.value);
+var num3=parseInt(document.f1.t3.value);
+var num4=parseInt(document.f1.t4.value);
+if(num1>num2 && num1>num3 && num1>num4)
+{
+alert(num1 +" Is maximum number");
+}
+else if(num2>num1 && num2>num3 && num2>num4)
+{
+alert(num2 +" Is maximum number");
+}
+else if(num3>num1 && num3>num2 && num3>num4)
+{
+alert(num3 +" Is maximum number");
+}
+else
+{
+alert(num4 +" Is maximum number");
+}
+}
+</script>
+</head>
+<body>
+<h1 align="center">Assignment No. - 2<br>
+Question No. - Part 3 , Q.2<br>
+Roll No. - 21<br>
+Class - TYIF</h1><hr>
+<form name=f1>
+<b>Number1:</b> <input type="textbox" name=t1><br>
+<b>Number2:</b> <input type="textbox" name=t2><br>
+<b>Number3:</b> <input type="textbox" name=t3><br>
+<b>Number4:</b> <input type="textbox" name=t4><br><br>
+<input type="button" value="greatest" onclick="greater()" >
+</form>
+</body>
+</html>

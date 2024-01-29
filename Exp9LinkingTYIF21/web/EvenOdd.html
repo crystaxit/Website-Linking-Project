@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>Even And Odd</title>
+<style type="text/css">
+.abc{color:red;}
+</style>
+<script language = "javascript">
+function display()
+{
+	
+	var str="";
+	if(document.f1.lowlmt.value < document.f1.upplmt.value)
+	{
+	 for(i=document.f1.lowlmt.value;i<=document.f1.upplmt.value;i++)
+	{
+	 if(i%2==0)
+	{
+	 str=str+i+",";
+	}
+	}
+	document.f1.even.value=str;
+	}
+	var str1="";
+	if(document.f1.lowlmt.value < document.f1.upplmt.value)
+	{
+	 for(i=document.f1.lowlmt.value;i<=document.f1.upplmt.value;i++)
+	{
+	 if(i%2==1)
+	{
+	 str1=str1+i+",";
+	}
+	}
+	document.f1.odd.value=str1;
+	}
+
+}
+</script>
+</head>
+<body>
+<h1 align="center">Assignment No. - 2<br>
+Question No. - Part 4 , Q.6<br>
+Roll No. - 21<br>
+Class - TYIF</h1><hr>
+<form name = "f1">
+<table align = "center">
+  <tr><td>Lower Limit</td>
+  <td><input type="Text" name="lowlmt" value="">
+  </td></tr>
+  <tr><td>Upper Limit</td>
+  <td><input type="Text" name="upplmt" value="">
+  </td></tr>
+  <tr><td>
+  <TextArea name = "even" value="" rows=5 column=5 class="abc">
+  </TextArea>
+  </td></tr>
+  <tr><td>
+  <TextArea name = "odd" value="" rows=5 column=5>
+  </TextArea>
+  </td></tr>
+  <tr><td>
+  <input type="Button" name="res" value="Result" onclick="display()">
+  </td></tr>
+</table>
+</form>
+</body>
+</html>

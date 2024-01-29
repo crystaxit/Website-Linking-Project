@@ -1,0 +1,150 @@
+<html>
+<head>
+<title> Array Objects</title>
+<style type="text/css">
+h1{color:red;font-size:25pt;font-family:verdana;}
+</style>
+<script>
+var cars=new Array("Ferrari","Lamborghini","Bentley","Rolce-Royce","Bugatti","BMW","Porchese","Audi","Mercedes","Alfa-Romeo","Lyka","Aston-Martin");
+	function Shift()
+	{
+
+		document.write("<table border=3>");
+		cars.shift();
+		document.write("<th>Shifted Array</th>");
+		for(i=0;i<cars.length;i++)
+		{
+			document.write("<tr><td>" +cars[i]+ "</td></tr>");
+		}
+		document.write("</table>");
+	}	
+	function Unshift()
+	{
+		var str=prompt("Enter the string");
+		cars.unshift(str);
+		document.write("<table border=3>");
+		document.write("<th>UnShifted Array</th>");
+		for(i=0;i<cars.length;i++)
+		{
+			document.write("<tr><td>" +cars[i]+ "</td></tr>");
+		}
+		document.write("</table>");	
+	}
+	function Splice()
+	{
+		
+		cars.splice(0,5,"Fortuner","XUV500");
+
+		document.write("<table border=3>");
+		document.write("<th>Spliced Array</th>");
+		for(i=0;i<cars.length;i++)
+		{
+			document.write("<tr><td>" +cars[i]+ "</td></tr>");
+		}
+		document.write("</table>");
+	}
+	function Slice()
+	{
+		
+		cars.slice(1);
+		
+		document.write("<table border=3>");
+		document.write("<th>Sliced Array</th>");
+		for(i=0;i<cars.length;i++)
+		{
+			document.write("<tr><td>" +cars[i]+ "</td></tr>");
+		}
+		document.write("</table>");
+	}
+	function Join()
+	{
+		document.write(cars.join(','))
+	}
+	function Sort()
+	{
+		document.write("<table border=3>");
+		cars.sort();
+		
+		document.write("<table border=3>");
+		document.write("<th>Sorted Array</th>");
+		for(i=0;i<cars.length;i++)
+		{
+			document.write("<tr><td>" +cars[i]+ "</td></tr>");
+		}
+		document.write("</table>");
+	}
+	function Reverse()
+	{
+		document.write("<table border=3>");
+		cars.reverse();
+		
+		document.write("<table border=3>");
+		document.write("<th>Reversed Array</th>");
+		for(i=0;i<cars.length;i++)
+		{
+			document.write("<tr><td>" +cars[i]+ "</td></tr>");
+		}
+		document.write("</table>");
+	}
+	function Pop()
+	{
+		document.write("<table border=3>");
+		cars.pop();
+		
+		document.write("<table border=3>");
+		document.write("<th>Popped Array</th>");
+		for(i=0;i<cars.length;i++)
+		{
+			document.write("<tr><td>" +cars[i]+ "</td></tr>");
+		}
+		document.write("</table>");
+	}
+	function Push()
+	{	
+		str=prompt("Enter new string");
+		document.write("<table border=3>");
+	
+		cars.push(str);
+		document.write("<th>Pushed Array</th>");
+		for(i=0;i<cars.length;i++)
+		{
+			document.write("<tr><td>" +cars[i]+ "</td></tr>");
+		}
+		document.write("</table>");
+	}
+</script>
+</head>
+<body>
+<h1 align="center">Experiment No. - 3<br>
+Question No. - Part 3 , Q.1<br>
+Roll No. - 21<br>
+Array Objects<br>
+Class - TYIF</h1><hr>
+<center>
+<form name="f1">
+
+<center>
+<table align="center">
+<tr><td>
+<input type="button" name="b1" value="Shift" onClick="Shift()"></td></tr>
+<tr><td>
+<input type="button" name="b2" value="Unshift" onClick="Unshift()"></td></tr>
+<tr><td>
+<input type="button" name="b3" value="Splice" onClick="Splice()"></td></tr>
+<tr><td>
+<input type="button" name="b4" value="Slice" onClick="Slice()"></td></tr>
+<tr><td>
+<input type="button" name="b5" value="Join" onClick="Join()"></td></tr>
+<tr><td>
+<input type="button" name="b6" value="Push" onClick="Push()"></td></tr>
+<tr><td>
+<input type="button" name="b7" value="Pop" onClick="Pop()"></td></tr>
+<tr><td>
+<input type="button" name="b8" value="Reverse" onClick="Reverse()"></td></tr>
+<tr><td>
+<input type="button" name="b9" value="Sort" onClick="Sort()"></td></tr>
+
+</table>
+</form>
+</body>
+</html>

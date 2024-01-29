@@ -1,0 +1,65 @@
+<html>
+<head>
+<title>Color</title>
+<style type="text/css">
+h1{color:#6200EA;font-size:25pt;font-family:verdana;}
+</style>
+<script language="javascript">
+function changeColour(value)
+{
+    var color = document.body.style.backgroundColor;
+    switch(value)
+    {
+        case 'b':
+            color = "#2196F3";
+        break;
+        case 'r':
+            color = "#F44336";
+        break;
+        case 'g':
+            color = "#009688";
+        break;
+    }
+    document.body.style.backgroundColor = color;
+}
+</script>
+</head>
+<body align="center">
+<h1 align="center">Experiment No. - 4<br>
+Question No. - Part 2<br>
+Roll No. - 21<br>
+Change Color<br>
+Class - TYIF</h1><hr>
+<div id= "genre">
+<h2>Select Any Color</h2>
+<br>
+<br>
+<form name="color" method="post" action="">
+<p>
+	<input type="radio" name="r1" value="radio" onClick="changeColour('b')">Blue
+	<input type="radio" name="r2" value="radio" onClick="changeColour('r')">Red
+	<input type="radio" name="r3" value="radio" onClick="changeColour('g')">Green
+<br>
+	<input type="button" name="b1" value="Blue" onclick="changeColour('b')">
+	<input type="button" name="b1" value="Red" onclick="changeColour('r')">
+	<input type="button" name="b1" value="Green" onclick="changeColour('g')">
+<br>
+<select name = "list" size="5">
+  <option value = "blue" onClick="changeColour('b')">Blue </option>
+  <option value = "red" onClick="changeColour('r')"> Red </option>
+  <option value = "green" onClick="changeColour('g')">Green </option>
+</select>
+<br>
+	<input type="text" name="t1" value="Blue" onclick="changeColour('b')">
+	<input type="text" name="t2" value="Red" onclick="changeColour('r')">
+	<input type="text" name="t3" value="Green" onclick="changeColour('g')">
+<br>
+<select onchange="changeColour(this.value)"> 
+	<option value="1" style="backgroundColor: red;">Red</option> 
+	<option value="2" style="backgroundColor: blue;">Blue</option> 
+	<option value="3" style="backgroundColor: green;">Green</option>
+</select>
+</div>
+</form>
+</body>
+</html>

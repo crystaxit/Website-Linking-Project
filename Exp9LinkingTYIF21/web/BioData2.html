@@ -1,0 +1,279 @@
+<html>
+<head>
+<title>BIODATA</title>
+<style type="text/css">
+
+h2{font-size:30pt;font-family:Calibri;}
+
+</style>
+<script language="JavaScript">
+	function fnamechk()
+	{
+		var fnamestr=document.biodata.fnametxt.value;
+		var n="[0-9]";
+		if(fnamestr.match(n))
+		{
+			alert("Fname cannot contain nos");
+		}
+	}
+	function mnamechk()
+	{
+		var mnamestr=document.biodata.mnametxt.value;
+		var n="[0-9]";
+		if(mnamestr.match(n))
+		{
+			alert("Mname cannot contain nos");
+		}
+	}
+	function lnamechk()
+	{
+		var lnamestr=document.biodata.mnametxt.value;
+		var n="[0-9]";
+		if(lnamestr.match(n))
+		{
+			alert("Lname cannot contain nos");
+		}
+	}
+	function telchk()
+	{
+		var telno=document.biodata.teltxt.value;
+		var telno1=document.biodata.teltxt.value;
+		var a="[a-z,A-Z]";
+		if(telno!="" || telno!=null)
+		{
+		 	if(telno.match(a))
+			{
+				alert("Telephone no cannot contain characters");
+			}
+		}
+
+		if(telno!="" || telno!=null)
+		{
+			if(telno1.length<7 || telno1.length>8)
+			{
+				alert("Telephone no should be of 7 or 8 digits");
+			}
+		}	
+		
+	}
+	
+	function mobchk()
+	{
+		var mobno=document.biodata.mobtxt.value;
+		var a="[a-z,A-Z]";
+		var substr=mobno.substring(0,1);
+		if(mobno.match(a))
+		{
+			alert("Mobile no cannot contain characters")
+		}
+		else if(mobno.length!=10)
+		{
+			alert("Mobile no should be of 10 digits");
+		}
+		else if(substr<7 || substr>9)
+		{
+				alert("Mobile number should start with 7 or 8 or 9 digit");
+		}
+	}
+	function emailchk()
+	{
+		var emailstr=document.biodata.emailtxt.value;
+		var a="[a-z,A-Z]";
+		var n="[0-9]";
+		var estr=(emailstr.match(a)); 
+		var estr1=(emailstr.match(n));
+		if(estr=="" || estr==null)
+		{
+			alert("Email should contain alphabets");
+		}
+		else if(estr1=="" || estr1==null)
+		{
+			alert("Email should contain numbers");
+		}
+		else if(emailstr.indexOf("@")==-1)
+		{
+			alert("Email id invalid @ should be present");
+		}
+		else if(emailstr.indexOf(".in")==-1 && emailstr.indexOf(".com")==-1)
+		{
+			alert("Email id invalid");
+		}
+	}
+	function passchk()
+	{
+		var passwordstr=document.biodata.passtxt.value;
+		var a="[a-z,A-Z]";
+		var n="[0-9]";
+		var spcl="/^+$/";
+		var pstr=(passwordstr.match(a) && passwordstr.match(n) && passwordstr.match(spcl));
+		if(passwordstr.length<8)
+		{
+			alert("Password should be of 8 characters");
+		}
+		else if(pstr==null || pstr=="")
+		{
+			alert("Password should contain alphabets,numbers and special characters");
+		}
+	}
+
+	function display()
+	{	
+		 if(document.biodata.fnametxt.value==""||document.biodata.lnametxt.value==""||
+		 document.biodata.mobtxt.value==""||document.biodata.emailtxt.value==""||
+		 document.biodata.passtxt.value=="" || document.biodata.datetxt.value=="" 
+		 || document.biodata.montxt.value==""|| document.biodata.yeartxt.value=="")
+		{
+			alert("Fields with '*' must be filled compulsarily");
+		}
+		else
+		{
+		 	vali();
+		}
+	}
+	function vali()
+	{
+		var fnamestr=document.biodata.fnametxt.value;
+		var mnamestr=document.biodata.mnametxt.value;
+		var lnamestr=document.biodata.lnametxt.value;
+		var mobno=document.biodata.mobtxt.value;
+		var telno=document.biodata.teletxt.value;
+		var emailstr=document.biodata.emailtxt.value;
+		var passwordstr=document.biodata.passtxt.value;
+		var addstr=document.biodata.addtxt.value;
+		var datestr=document.biodata.datetxt.value;
+		var monstr=document.biodata.montxt.value;
+		var yearstr=document.biodata.yeartxt.value;
+		var form1=document.biodata;
+		var finalhob="";
+		var finalquali="";
+		for(var i=0;i<form1.hobcheck.length;i++)
+		{
+			if(form1.hobcheck[i].checked)
+			{finalhob+=form1.hobcheck[i].value+",";}
+		}
+		for(var j=0;j<form1.qualifytxt.length;j++)
+		{
+			if(form1.qualifytxt[j].checked)
+			{finalquali+=form1.qualifytxt[j].value+"";}
+		}
+		document.write("<center>");
+
+		document.write("<table border=3>");
+		document.write("<h1 align='center'> BIODATA </h1><hr><br>");
+		
+		document.write("<tr><th>First Name</th><td>" +fnamestr+ "</td></td></tr>");
+		document.write("<tr><th>Middle Name</th><td>" +mnamestr+ "</td></td></tr>");
+		document.write("<tr><th>Last Name</th><td>" +lnamestr+ "</td></td></tr>");
+		quitadd:if(addstr=="" || addstr==null)
+		{break quitadd;}
+		else
+		{document.write("<tr><th>Address</th><td>" +addstr+ "</td></td></tr>");} 
+		quittel:if(telno=="" || telno==null)
+		{break quittel;}
+		else
+		{document.write("<tr><th>Telephone Number</th><td>" +telno+ "</td></tr>");}
+		document.write("<tr><th>Hobbies</th><td>" +finalhob+ "</td></tr>");
+		document.write("<tr><th>Qualification</th><td>" +finalquali+ "</td></tr>");
+		document.write("<tr><th>D.O.B</th><td>" +datestr+ "/"+monstr+ "/" +yearstr+ "</td></tr>");	
+		document.write("<tr><th>Mobile Number</th><td>" +mobno+ "</td></td></tr>");
+		document.write("<tr><th>Email id</th><td>" +emailstr+ "</td></td>");
+		document.write("<tr><th>Password</th><td>" +passwordstr+ "</td></td></tr>");
+	}
+</script>
+</head>
+<body>
+<form name="biodata">
+<center>
+<h2>Roll no-21</h3>
+<h2>Experiment No.4</h3>
+<h2>Program 2.1</h3><hr>
+<table>
+<tr>
+<td><b>FNAME</b></td>
+<td><input type="Text" name=fnametxt value="" onBlur="fnamechk()"></td>
+<td><font color=Red>*</font></td>
+</tr>
+<tr>
+<td><b>MNAME</b></td>
+<td><input type="Text" name=mnametxt value="" onBlur="mnamechk()"></td>
+<td><font color=Red>*</font></td>
+</tr>
+<tr>
+<td><b>LNAME</b></td>
+<td><input type="Text" name=lnametxt value="" onBlur="lnamechk()"></td>
+<td><font color=Red>*</font></td>
+</tr>
+<tr>
+<td><b>ADDRESS</b></td>
+<td><TextArea name=addtxt value=""></TextArea></td>
+</tr>
+<tr>
+<td><b>TELEPHONE</b></td>
+<td><input type="Text" name=teletxt value="" onBlur="telchk()"></td>
+</tr>
+
+<tr>
+<td><b>D.O.B</b></td>
+<td><select name=datetxt>
+<option value=dd>dd</option>
+<script language="JavaScript">
+	var i;
+	for(i=1;i<=31;i++)
+	document.write("<option value=" +i+">" +i+ "</option>");
+	document.write("</select>");
+</script>
+<td><select name=montxt>
+<option value=mm>mm</option>
+<script language="JavaScript">
+	var i;
+	for(i=1;i<=12;i++)
+	document.write("<option value=" +i+">" +i+ "</option>");
+	document.write("</select>");
+</script>
+<td><select name=yeartxt>
+<option value=yy>yy</option>
+<script language="JavaScript">
+	var i;
+	for(i=1990;i<=2030;i++)
+	document.write("<option value=" +i+">" +i+ "</option>");
+	document.write("</select>");
+</script>
+<td><font color=Red>*</font></td>
+</td>
+</tr>
+<tr>
+<td><b>HOBBIES</b></td>
+<td><input type="checkbox" name="hobcheck" value="Reading Encyclopedias">Reading Encyclopedias</td>
+<td><input type="checkbox" name="hobcheck" value="Gaming">Gaming</td>
+<td><input type="checkbox" name="hobcheck" value="Sketching">Sketching</td>
+<td><font color=Red>*</font></td>
+</tr>
+<td><b>QUALIFICATION</b></td>
+<td><input type="radio" name="qualifytxt" value="SSC">SSC</td>
+<td><input type="radio" name="qualifytxt" value="DIPLOMA">DIPLOMA</td>
+<td><input type="radio" name="qualifytxt" value="DEGREE">DEGREE</td>
+<td><font color=Red>*</font></td>
+</tr>
+<td><b>MOBILE</b></td>
+<td><input type="Text" name=mobtxt value="" onBlur="mobchk()"></td>
+<td><font color=Red>*</font></td>
+</tr>
+<tr>
+<td><b>Email</b></td>
+<td><input type="Text" name=emailtxt value="" onBlur="emailchk()"></td>
+<td><font color=Red>*</font></td>
+</tr>
+<tr>
+<td><b>Password</b></td>
+<td><input type="Password" name=passtxt value="" onBlur="passchk()"></td>
+<td><font color=Red>*</font></td>
+</tr>
+<tr>
+<td><input type="Button" name=okbtn value="Submit" onClick="display()"></td>
+<td><input type="Reset" name=clrbtn value="Clear"></td>
+</tr>
+</table>
+</form>
+</body>
+</html>
+

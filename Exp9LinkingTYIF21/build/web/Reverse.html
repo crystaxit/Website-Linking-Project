@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>Reverse Number</title>
+<script language="javascript">
+function reverse()
+{
+	
+	var n=document.f1.no.value;
+	var reverse=0,rem;
+	var x;
+	 var sum=0;
+	/*while(n!=0)
+	{
+		rem=n%10;
+		reverse=reverse*10+rem;
+		n=Math.floor(n/10);
+	}
+		document.f1.rev.value=reverse;*/
+
+	while(n!=0)
+	{
+		x=n%10;
+		sum=sum+x;
+		n=Math.floor(n=n/10);
+	}
+	document.f1.sum.value=sum;	
+}
+</script>
+</head>
+<body>
+<form name="f1">
+<center>
+<h1 align="center">Assignment No. - 2<br>
+Question No. - Part 4 , Q.4<br>
+Roll No. - 21<br>
+Class - TYIF</h1><hr>
+<table>
+
+
+<tr><td>Enter No.<input type="text" name="no" value=""></td></tr>
+
+<tr><td>Reverse No.<input type="text" name="rev" value=""></td></tr>
+
+<tr><td>Sum of No.<input type="text" name="sum" value=""></td></tr>
+<tr><td align="center"><input type="button" name="calc" value="Reverse" onClick="reverse()"></td></tr>
+
+</center>
+</table>
+</form>
+</body>
+</html>

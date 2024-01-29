@@ -1,0 +1,73 @@
+<html>
+<head>
+<title> DIVISIBILITY </title>
+<script language="JavaScript">
+function db3()
+{
+	var lo=document.f1.low.value;
+	var hi=document.f1.high.value;
+	var res="";
+	for(i=lo;i<hi;i++)
+	{
+	 if(i%3==0)
+		{
+			res=res+","+i;
+		}
+	}
+      alert(res);
+}
+function db5()
+{
+	var lo=document.f1.low.value;
+	var hi=document.f1.high.value;
+	for(i=lo;i<hi;i++)
+	{
+	 if(i%5==0)
+		{
+			alert("number is divible by 5");
+		}
+	}
+}
+function db7()
+{
+	var lo=document.f1.low.value;
+	var hi=document.f1.high.value;
+	for(i=lo;i<hi;i++)
+	{
+	 if(i%7==0)
+		{
+			alert("number is divible by 7");
+		}
+	}
+}
+</script>
+</head>
+<body>
+<h1 align="center">Assignment No. - 2<br>
+Question No. - Part 4 , Q.5<br>
+Roll No. - 21<br>
+Class - TYIF</h1><hr>
+<form name="f1">
+<select name=low>
+<option value="1">1</option>	
+<option value="10">10</option>	
+<option value="100">100</option>	
+<option value="1000">1000</option>	
+<option value="10000">10000</option>	
+</select>
+<select name=high>
+<option value="1">1</option>	
+<option value="10">10</option>	
+<option value="100">100</option>	
+<option value="1000">1000</option>	
+<option value="10000">10000</option>
+</select>
+<table>
+<tr><td><input type="button" name="get" value="Divisible By 3" onClick="db3()"></td></tr>
+<tr><td><input type="button" name="getval" value="Divisible By 5" onClick="db5()"></td></tr>
+<tr><td><input type="button" name="getnum" value="Divisible By 7" onClick="db7()"></td></tr>
+</table>
+</form>
+</body>
+</html>
+

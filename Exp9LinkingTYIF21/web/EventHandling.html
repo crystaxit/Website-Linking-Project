@@ -1,0 +1,109 @@
+<html>
+<head>
+<title>Event Handling</title>
+<style type="text/css">
+h1{color:red;font-size:25pt;font-family:verdana;}
+</style>
+<script language="JavaScript">
+function event()
+{
+alert("This is an Example of form OnLoad!");
+}
+function blur()
+{
+var x=document.f1.txt1.value;
+alert(x.toUpperCase());
+}
+function change()
+{
+var y=document.f1.mySelect.value;
+alert(y);
+}
+function clickeve()
+{
+var z=document.f1.txt3.value;
+alert("Hello "+z);
+}
+function bigImg(x) 
+{
+x.style.height = "120px";
+x.style.width = "120px";
+}
+function normalImg(x)
+{
+x.style.height = "60px";
+x.style.width = "60px";
+}
+function submiteve() 
+{
+alert("The form was submitted");
+}
+function unloading()
+{
+alert("Thank you!");
+}
+window.onerror = ErrorSetting;
+var e_msg = "";
+var e_file = "";
+var e_line = "";
+document.form[8].value = "myButton"; // This is the error
+function ErrorSetting(msg, file_loc, line_no) {
+e_msg = msg;
+e_file = file_loc;
+e_line = line_no;
+return true; 
+}
+function display() 
+{
+var   error_d = "Error in file: " + e_file + 
+"\nline number:" + e_line +
+"\nMessage:" + e_msg;
+alert("Error Window:\n" + error_d); 
+}
+</script>
+<body onLoad="event()"  onSubmit="submiteve()"  onunload="unloading()">
+<h1 align="center">Experiment No. - 3<br>
+Question No. - Part 5 , Q.1<br>
+Roll No. - 21<br>
+Event Handling<br>
+Class - TYIF</h1><hr>
+<form name="f1">
+<table>
+<tr><td><h3>onBlur Event</h3></td></tr>
+<tr><td>When you leave the input field, the text will be transformed into upper case.
+<input type="text" name="txt1" onBlur="blur()"></td></tr>
+<tr><td><h3>onChange Event</h3></td></tr>
+<tr><td>When you change the input field, the number will be displayed in an alert.
+<select name="mySelect" onchange="change()">
+<option value="1">1
+<option value="2">2
+<option value="3">3
+</select></td></tr>
+<tr><td><h3>onClick Event</h3></td></tr>
+<tr><td>Enter Your Name here then Click on Okay Button.
+<input type="text" name="txt3" value="">
+<input type="button" name="btn1" value="Okay" onClick="clickeve()">
+<tr><td><h3>onFocus Event</h3></td></tr>
+<tr><td>Click in the textbox
+<input type="text" name="txt4" onFocus='alert("You focused in the textbox")'></td></tr>
+<tr><td><h3>onMouseOver and onMouseOut Event</h3></td></tr>
+<tr><td>Place your mouse over the image to see this event
+<img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="smiley.png" alt="Smiley" width="60" height="60"></td></tr>
+<tr><td><h3>onReset Event</h3></td></tr>
+<tr><td>Press Reset Button to reset the Form
+<input type="reset" value="Reset" onReset="alert('Reseting Form!')">
+<tr><td><h3>onSelect Event</h3></td></tr>
+<tr><td><input type="text" name="txt5" value="Select Text" onSelect="alert('Example of onSelect')"></td></tr>
+<tr><td><h3>onSubmit Event</h3></td></tr>
+<tr><td>Enter text and Click on Submit button:<input type="text" name="txt6" value="">
+<input type="submit" value="Submit">
+<tr><td><h3>onError Event</h3></td></tr>
+<tr><td><input type="button" name="error" value="Show the Error" onClick="display()"></td></tr>
+<tr><td><h3>onAbort Event</h3></td></tr>
+<tr><td><img src="smiley.png" onAbort="alert('Image Loaded Stopped..!')"></td></tr>
+</table>
+</form>
+</body>
+</html>
+
+

@@ -1,0 +1,73 @@
+<html>
+<head>
+<title>Quadratic Equations </title>
+<script language="JavaScript">
+function display()
+{
+	var coe1,coe2,coe3,d,r1,r2;
+	coe1=parseInt(document.f1.txtcoeff1.value);
+	coe2=parseInt(document.f1.txtcoeff2.value);
+	coe3=parseInt(document.f1.txtcoeff3.value);
+	d=((coe2*coe2)-4*coe1*coe3);
+	if(d>0)
+	{
+		r1=(-coe2-(Math.sqrt((coe2*coe2)-(4*coe1*coe3))))/(2*coe1);
+		r2=(-coe2+(Math.sqrt((coe2*coe2)-(4*coe1*coe3))))/(2*coe1);
+		document.f1.txtmsg.value="Roots are Real and Unequal";	
+		document.f1.txtroot1.value=r1;
+		document.f1.txtroot2.value=r2;			
+	}
+	else if (d==0)
+	{
+		r1=Math.sqrt(4*coe1*coe3);
+		document.f1.txtmsg.value="Roots are Real and Equal";
+		document.f1.txtroot1.value=r1;
+		document.f1.txtroot2.value=-r1;
+	}
+	else
+	{
+		document.f1.txtmsg.value="Roots are Imaginary";
+	}
+}
+</script>	
+</head>
+<body>
+<form name="f1">
+<h1 align="center">Assignment No. - 2<br>
+Question No. - Part 3 , Q.4<br>
+Roll No. - 21<br>
+Class - TYIF</h1><hr>
+<table>
+<tr><td>Enter the Co-efficient 1: </td>
+<td>
+<input type="text" name="txtcoeff1" value="">
+</td></tr>
+<tr><td>Enter the Co-efficient 2: </td>
+<td>
+<input type="text" name="txtcoeff2" value="">
+</td></tr>
+<tr><td>Enter the Co-efficient 3: </td>
+<td>
+<input type="text" name="txtcoeff3" value="">
+</td></tr>
+<tr><td>Root1: </td>
+<td>
+<input type="text" name="txtroot1" value="">
+</td></tr>
+<tr><td>Root2: </td>
+<td>
+<input type="text" name="txtroot2" value="">
+</td></tr>
+<tr><td>Message: </td>
+<td>
+<input type="text" name="txtmsg" value="">
+</td></tr>
+<tr><td>
+</td></tr>
+<tr><td>
+<input type="Button" name="btnrslt" value="Result" onClick="display()">
+</td></tr>
+</table>
+</form>
+</body>
+</html>

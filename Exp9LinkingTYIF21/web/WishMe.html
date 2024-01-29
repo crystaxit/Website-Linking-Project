@@ -1,0 +1,29 @@
+<html>
+<head>
+<title> Wish Me </title>
+<script language="javascript">
+function checkTextField(field) 
+{
+    if (field.value == '1') 
+	{
+        alert("Good Morning");
+    }
+	else 
+	{
+        window.close();
+	}
+}
+</script>
+</head>
+<body>
+<h1 align="center">Assignment No.2<br>
+Question No. - Part 3 , Q-1<br>
+Roll No.- 21<br>
+Class - TYIF<br></h1>
+<form name="f1">
+<input type="text" name="txt1" <input type="text" name="checking" id="checking" 
+ onblur="checkTextField(this);" value="">
+<input type="button" name="btn1" onClick="checkTextField()" value="ClickMe">
+</form>
+</body>
+</html>
